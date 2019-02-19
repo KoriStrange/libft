@@ -1,0 +1,106 @@
+1. libc functions
+
+-done
+
+-doable
+ 1 strlen
+ 2 strdup
+ 3 strcpy
+ 4 strncpy
+ 5 isalpha
+ 6 isdigit
+ 7 isalnum
+ 8 toupper
+ 9 tolower 
+
+-challenge
+ 10 strcmp
+ 11 strncmp
+ 12 atoi
+
+-read up
+ 13 memset
+ 14 bzero
+ 15 memcpy
+ 16 memccpy
+ 17 memmove
+ 18 memchr
+ 19 memcmp
+ 20 strcat
+ 21 strncat
+ 22 strlcat
+ 23 strchr
+ 24 strrchr
+ 25 strstr
+ 26 strnstr
+ 27 isascii
+ 28 isprint
+
+2. Additional functions
+
+-done
+
+-doable
+ 29 putchar
+ 30 putstr
+
+
+-challenge
+ 31 putnbr
+
+-read up
+ 32 memalloc
+ 33 memdel
+ 34 strnew
+ 35 strdel
+ 36 strclr
+ 37 striter
+ 38 striteri
+ 39 strmap
+ 40 strmapi
+ 41 strequ
+ 42 strnequ
+ 43 strsub
+ 44 strjoin
+ 45 strtrim
+ 46 strsplit
+ 47 itoa
+ 48 putendl
+ 49 putchar_fd
+ 50 putstr_fd
+ 51 putendl_fd
+ 52 putnbr_fd
+
+3. bonus
+
+-done
+
+-doable
+
+-challenge
+
+-read up
+ 53 lstnew
+ 54 lstdelone
+ 55 lstdel
+ 56 lstadd
+ 57 lstiter
+ 58 lstmap
+
+4. personal
+
+-done
+
+-doable
+
+-challenge
+
+-read up
+ 59 print_hex
+ 60 atoi_base
+ 61 splite_whitespaces
+ 62 print_bits
+ 63 swap_bits
+ 64 reverse_bits
+ 65 wordcount
+ 66 charcount
