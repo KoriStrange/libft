@@ -1,23 +1,25 @@
 
-NAME = libft.a
+name = libft.a
 
-SRCS = srcs/*.c
+flags = -Wall -Werror -Wextra -I. -c
 
-HEADERS = includes/*.h
+srcs = *.c
 
-OBJ = *.o
+obj = *.o
 
-all: $(NAME)
+all: $(name)
 
-$(NAME): 
-	gcc -I $(HEADER) -c $(SRCS)
-	ar rv $(OBJ)
-	ranlib $(NAME)
+$(name): $(obj)
+	ar rcs $(name) $(obj)
+
+$(obj): $(srcs)
+	gcc $(flags) $(srcs)
 
 clean:
-	rm -f $(OBJ)
+	rm -f $(obj)
 
 fclean: clean
-	rm -f $(NAME)
+	rm -f $(name)
+	rm -f *.h.*
 
 re: fclean all
