@@ -3,13 +3,17 @@ name = app
 
 flags = -Wall -Werror -Wextra
 
-lib = ..
+srcs = srcs/*.c
 
-include = -I$(lib) -L$(lib) -lft
+objs = srcs/*.o
 
-srcs = main.c
+headers = includes/
 
-objs = main.o
+libs = .. .
+
+include = -I$(libft) -L$(libft) -lft
+
+
 
 all: $(name)
 
