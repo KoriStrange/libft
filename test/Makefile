@@ -5,7 +5,7 @@ flags = -Wall -Werror -Wextra
 
 lib = ..
 
-include = -I$(lib) -L$(lib) -lft $(flags)
+include = -I$(lib) -L$(lib) -lft
 
 srcs = main.c
 
@@ -13,11 +13,11 @@ objs = main.o
 
 all: $(name)
 
-$(name): 
+$(name):
 	make -C $(lib)
-	gcc -o $(name) $(srcs) $(include)
+	gcc -o $(name) $(srcs) $(include) $(flags)
 
-clean: 
+clean:
 	rm -f $(objs)
 
 fclean: clean

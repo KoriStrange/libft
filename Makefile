@@ -24,6 +24,5 @@ clean:
 
 fclean: clean
 	rm -f $(name)
-	rm -f *.h.*
 
 re: fclean all
