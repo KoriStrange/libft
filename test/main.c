@@ -6,7 +6,7 @@ int	main()
 				/*1. libc functions*/
 
 /*1. ft_strlen*/
-	t_strlen("hello");
+	t_strlen();
 /*2. ft_strdup*/
 /*3. ft_strcpy*/
 /*4. ft_strncpy*/

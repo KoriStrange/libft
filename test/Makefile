@@ -3,29 +3,31 @@ name = app
 
 flags = -Wall -Werror -Wextra
 
-srcs = srcs/*.c
+srcs = t*.c
 
-objs = srcs/*.o
+objs = t*.o
 
-headers = includes/
+lib = libtest.a
 
-libs = .. .
+libft = -I.. -L.. -lft
 
-include = -I$(libft) -L$(libft) -lft
-
+libtest = -I. -L. -ltest
 
 
 all: $(name)
 
 $(name):
-	make -C $(lib)
-	gcc -o $(name) $(srcs) $(include) $(flags)
+	make -C ..
+	gcc $(libft) -c $(srcs) $(flags)
+	ar rcs $(lib) $(objs)
+	gcc -o $(name) main.c $(libtest) $(libft) $(flags)
+
 
 clean:
 	rm -f $(objs)
 
 fclean: clean
-	rm -f $(name)
-	make fclean -C $(lib)
+	rm -f $(lib) $(name)
+	make fclean -C ..
 
 re: fclean all
