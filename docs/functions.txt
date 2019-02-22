@@ -4,28 +4,23 @@
 
 -done
  1 .strlen
- 2 .strdup.
- 3 .strcpy.
+ 2 .strdup
+ 3 .strcpy
+ 4 .strncpy
  5 .isalpha
  6 .isdigit
  7 .isalnum
  8 .toupper
  9 .tolower
+ 10 .strcmp
+ 11 .strncmp
+ 12 .atoi
+ 13 .memset
+ 14 .bzero
  27 .isascii
  28 .isprint
 
--doable
- 4 strncpy
-
--challenge
- 4 strncpy
- 10 strcmp
- 11 strncmp
- 12 atoi
-
--read up
- 13 memset
- 14 bzero
+-task
  15 memcpy
  16 memccpy
  17 memmove
@@ -38,21 +33,17 @@
  24 strrchr
  25 strstr
  26 strnstr
- 28 isprint
 
 2. Additional functions
 
+-tested
+
 -done
+ 29 .putchar
+ 30 .putstr
+ 31 .putnbr
 
--doable
- 29 putchar
- 30 putstr
-
-
--challenge
- 31 putnbr
-
--read up
+-task
  32 memalloc
  33 memdel
  34 strnew
@@ -77,13 +68,11 @@
 
 3. bonus
 
+-tested
+
 -done
 
--doable
-
--challenge
-
--read up
+-task
  53 lstnew
  54 lstdelone
  55 lstdel
@@ -93,13 +82,11 @@
 
 4. personal
 
+-tested
+
 -done
 
--doable
-
--challenge
-
--read up
+-task
  59 print_hex
  60 atoi_base
  61 splite_whitespaces
