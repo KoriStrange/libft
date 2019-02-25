@@ -9,7 +9,7 @@
 
 /* 1. libc function prototypes */
 int	ft_strlen(char *str); //tested
-//char	ft_strdup(const char *s);
+char	ft_strdup(const char *s);
 //char	ft_strcpy(char *dest, const char *src);
 //char	ft_strncpy(char *dest, const char *src, size_t n);
 int	ft_isalpha(int c); //tested

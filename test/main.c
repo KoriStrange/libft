@@ -3,21 +3,47 @@
 
 int	main()
 {
-				/*1. libc functions*/
+/*1. libc functions*/
 
+	char	*s;
+	size_t	n;
+	char a, b, c;
+	char	*is, *ls, *us;
+
+	s = "Hi Tom";
+	n = 4;
+	a = 'a';
+	b = '0';
+	c = ' ';
+	is = "123";
+	ls = "small";
+	us = "big";
+
+	ft_putstr("test string: ");
+	ft_putstr(s);
+	ft_putstr("\n\n");
 /*1. ft_strlen*/
-	t_strlen();
+	t_strlen(s);
 /*2. ft_strdup*/
+	t_strdup(s);
 /*3. ft_strcpy*/
+	t_strcpy(s);
 /*4. ft_strncpy*/
+	t_strncpy(s, n);
 /*5. ft_isalpha*/
+	t_isalpha(a, b, c);
 /*6. ft_isdigit*/
+	t_isdigit(a, b, c);
 /*7. ft_isalnum*/
+	t_isalnum(a, b, c);
 /*8. ft_toupper*/
+	t_toupper(ls);
 /*9. ft_tolower*/
+	t_tolower(us);
 /*10. ft_strcmp*/
 /*11. ft_strncmp*/
 /*12. ft_atoi*/
+	t_atoi(is);
 /*13. ft_memset*/
 /*14. ft_bzero*/
 /*15. ft_memcpy*/
@@ -33,7 +59,9 @@ int	main()
 /*25. ft_strstr*/
 /*26. ft_strnstr*/
 /*27. ft_isascii*/
+	t_isascii(a, b, c);
 /*28. ft_isprint*/
+	t_isprint(a, b, c);
 
 				/*2. additional functions*/
 
