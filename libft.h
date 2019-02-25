@@ -9,9 +9,9 @@
 
 /* 1. libc function prototypes */
 int	ft_strlen(char *str); //tested
-char	ft_strdup(const char *s);
-//char	ft_strcpy(char *dest, const char *src);
-//char	ft_strncpy(char *dest, const char *src, size_t n);
+char	*ft_strdup(char *s);
+char	*ft_strcpy(char *dest, char *src);
+char	*ft_strncpy(char *dest, char *src, size_t n);
 int	ft_isalpha(int c); //tested
 int	ft_isdigit(int c); //tested
 int	ft_isalnum(int c); //tested
