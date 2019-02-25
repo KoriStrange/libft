@@ -6,15 +6,17 @@ int	main()
 /*1. libc functions*/
 
 	char	*s;
+	char	*t;
 	size_t	n;
 	char a, b, c;
 	char	*is, *ls, *us;
 
 	s = "Hi Tom";
-	n = 4;
+	t = "Hi Rob";
+	n = 3;
 	a = 'a';
 	b = '0';
-	c = ' ';
+	c = '\t';
 	is = "123";
 	ls = "small";
 	us = "big";
@@ -41,11 +43,15 @@ int	main()
 /*9. ft_tolower*/
 	t_tolower(us);
 /*10. ft_strcmp*/
+	t_strcmp(s, t);
 /*11. ft_strncmp*/
+	t_strncmp(s, t, n);
 /*12. ft_atoi*/
 	t_atoi(is);
 /*13. ft_memset*/
+	t_memset(a);
 /*14. ft_bzero*/
+	t_bzero(a);
 /*15. ft_memcpy*/
 /*16. ft_memccpy*/
 /*17. ft_memmove*/

@@ -17,11 +17,11 @@ int	ft_isdigit(int c); //tested
 int	ft_isalnum(int c); //tested
 int	ft_toupper(int c); //tested
 int	ft_tolower(int c); //tested
-//int	ft_strcmp(const char *s1, const char *s2);
-//int	ft_strncmp(const char *s1, const char *s2, size_t n);
+int	ft_strcmp(char *s1, char *s2);
+int	ft_strncmp(char *s1, char *s2, size_t n);
 int	ft_atoi(char *str); //tested
-//void	ft_memset(void *s, int c, size_t n);
-//void	ft_bzero(void *s, size_t n);
+void	*ft_memset(void *s, int c, size_t n);
+void	*ft_bzero(void *s, size_t n);
 //memcpy
 //memccpy
 //memmove
