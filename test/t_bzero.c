@@ -2,9 +2,15 @@
 #include "libtest.h"
 #include "libft.h"
 
-void	t_bzero(char c)
+void	t_bzero(size_t n)
 {
-	if (c)
+	char a[15];
+
+	ft_bzero(a, n);
+	if (n)
 		ft_putstr("ft_bzero: ");
+	ft_putstr("(");
+	ft_putstr(a);
+	ft_putstr(")");
 	ft_putstr("\n\n");
 }

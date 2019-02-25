@@ -49,9 +49,9 @@ int	main()
 /*12. ft_atoi*/
 	t_atoi(is);
 /*13. ft_memset*/
-	t_memset(a);
+	t_memset(a, n);
 /*14. ft_bzero*/
-	t_bzero(a);
+	t_bzero(n);
 /*15. ft_memcpy*/
 /*16. ft_memccpy*/
 /*17. ft_memmove*/
