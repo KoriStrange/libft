@@ -5,21 +5,20 @@ int	main()
 {
 /*1. libc functions*/
 
-	char	*s;
-	char	*t;
+	char	s[20] = "Hello";
+	char	t[20] = "Later";
 	size_t	n;
-	char a, b, c;
-	char	*is, *ls, *us;
+	char	a, b, c;
+	char	*is, *ls, *us, *f;
 
-	s = "Hi Tom";
-	t = "Hi Rob";
-	n = 3;
-	a = 'a';
+	n = 4;
+	a = 'e';
 	b = '0';
 	c = '\t';
 	is = "123";
 	ls = "small";
 	us = "big";
+	f = "loL";
 
 	ft_putstr("test string: ");
 	ft_putstr(s);
@@ -58,18 +57,24 @@ int	main()
 /*18. ft_memchr*/
 /*19. ft_memcmp*/
 /*20. ft_strcat*/
+	t_strcat(s, t);
 /*21. ft_strncat*/
+	t_strncat(s, t, n);
 /*22. ft_strlcat*/
 /*23. ft_strchr*/
+	t_strchr(s, a);
 /*24. ft_strrchr*/
+	t_strrchr(s, a);
 /*25. ft_strstr*/
+	t_strstr(s, f);
 /*26. ft_strnstr*/
+	t_strnstr(s, f, n);
 /*27. ft_isascii*/
 	t_isascii(a, b, c);
 /*28. ft_isprint*/
 	t_isprint(a, b, c);
 
-				/*2. additional functions*/
+/*2. additional functions*/
 
 /*29. ft_putchar*/
 /*30. ft_putstr*/
@@ -96,7 +101,7 @@ int	main()
 /*51. ft_putendl_fd*/
 /*52. ft_putnbr_fd*/
 
-				/*3. bonus functions*/
+/*3. bonus functions*/
 
 /*53. ft_lstnew*/
 /*54. ft_lstdelone*/

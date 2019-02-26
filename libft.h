@@ -27,13 +27,13 @@ void	*ft_bzero(void *s, size_t n);
 //memmove
 //memchr
 //memcmp
-//strcat
-//strncat
+char	*ft_strcat(char *dest, char *src);
+char	*ft_strncat(char *dest, char *src, size_t n);
 //strlcat
-//strchr
-//strrchr
-//strstr
-//strnstr
+char	*ft_strchr(char *s, int c);
+char	*ft_strrchr(char *s, int c);
+char	*ft_strstr(char *h, char *n);
+char	*ft_strnstr(char *h, char *n, size_t a);
 int	ft_isascii(int c); //...
 int	ft_isprint(int c); //...
 

@@ -9,6 +9,9 @@ void	t_bzero(size_t n)
 	ft_bzero(a, n);
 	if (n)
 		ft_putstr("ft_bzero: ");
+	ft_putstr("size(");
+	ft_putnbr((int) n);
+	ft_putstr(") ");
 	ft_putstr("(");
 	ft_putstr(a);
 	ft_putstr(")");
