@@ -39,9 +39,6 @@ int	ft_isprint(int c); //tested
 
 
 /* 2. additional function prototypes */
-void	ft_putchar(char c); //tested
-void	ft_putstr(char *str); //tested
-void	ft_putnbr(int nb); //tested
 void	*ft_memalloc(size_t size);
 void	ft_memdel(void **ap);
 char	*ft_strnew(size_t size);
@@ -58,7 +55,10 @@ char	*ft_strjoin(char *s1, char *s2);
 char	*ft_strtrim(char *s);
 //strsplit
 //itoa
+void	ft_putchar(char c);
+void	ft_putstr(char *s);
 void	ft_putendl(char *s, int fd);
+void	ft_putnbr(int n);
 void	ft_putchar_fd(char *s, int fd);
 void	ft_putstr_fd(char *s, int fd);
 void	ft_putendl_fd(char *s, int fd)
