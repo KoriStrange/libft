@@ -1,19 +1,18 @@
 
 #include "libft.h"
 
-char	*ft_strsub(char *s, unsigned int start, size_t n)
+char	*ft_strsub(char *s, unsigned int start, size_t len)
 {
-	int	n;
-	char	*f;
+	unsigned int	i;
+	char		*w;
 
-	n = 0;
-	f = (char *) malloc(sizeof(char) * ((int) n - start));
-	while (start < (int) n && start < (ft_strlen(s) + 1))
+	i = 0;
+	w = ft_strnew(len);
+	while ((size_t) i < len && (int) start < ft_strlen(s))
 	{
-		f[n] = s[start];
-		n++;
+		w[i] = s[start];
+		i++;
 		start++;
 	}
-	f[n] = '\0';
-	return (f);
+	return (w);
 }
