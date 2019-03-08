@@ -1,5 +1,5 @@
 
-name = libft.a
+NAME = libft.a
 
 flags = -Wall -Werror -Wextra
 
@@ -27,16 +27,17 @@ objs = ft_strlen.o ft_strdup.o ft_strcpy.o ft_strncpy.o ft_isalpha.o ft_isdigit.
       ft_putnbr_fd.o \
 
 
-all: $(name)
+all: $(NAME)
 
-$(name):
+$(NAME):
 	gcc -I. -c $(srcs) $(flags)
-	ar rcs $(name) $(objs)
+	ar rcs $(NAME) $(objs)
+	ranlib $(NAME)
 
 clean:
 	rm -f $(objs)
 
 fclean: clean
-	rm -f $(name)
+	rm -f $(NAME)
 
 re: fclean all
