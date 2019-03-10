@@ -3,5 +3,5 @@
 
 char	*ft_strcat(char *dest, char *src)
 {
-	return (strncat(dest, src, (size_t) ft_strlen(src)));
+	return (ft_strncat(dest, src, (size_t) ft_strlen(src)));
 }

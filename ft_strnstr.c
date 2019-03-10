@@ -8,14 +8,15 @@ char	*ft_strnstr(char *h, char *n, size_t a)
 
 	i = 0;
 	j = 0;
-	while (h[i] != '\0')
+	if (!n)
+		return(h);
+	while (h[i] && i < (int) a)
 	{
-		while (h[i + j] == n[j])
-		{
+		while (h[i + j] == n[j] && n[i])
 			j++;
-		}
-		if (n[j] == '\0' || j == (int) a)
+		if (n[j] == '\0')
 			return (&h[i]);
+		j = 0;
 		i++;
 	}
 	return (NULL);

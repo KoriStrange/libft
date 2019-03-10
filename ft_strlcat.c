@@ -3,16 +3,16 @@
 
 size_t	ft_strlcat(char *dest, char *src, size_t n)
 {
-	int i;
-	int j;
+	size_t ld;
+	size_t ls;
 
-	i = ft_strlen(dest);
-	j = 0;
-	while (j < (int) n)
-	{
-		dest[i + j] = src[j];
-		j++;
-	}
-	dest[i + j] = '\0';
-	return ((size_t) ft_strlen(dest));
+	ld = ft_strlen(dest);
+	ls = ft_strlen(src);
+	if (ld >= n)
+		return (ls + n);
+	dest += ld;
+	while (*src && n-- > ld + 1)
+		*dest++ = *src++;
+	*dest = '\0';
+	return (ld + ls);
 }
