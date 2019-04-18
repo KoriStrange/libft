@@ -7,7 +7,7 @@ char	*ft_strsub(char *s, unsigned int start, size_t len)
 	char		*w;
 
 	i = 0;
-	w = ft_strnew(len);
+	w = ft_strnew(len + 1);
 	while ((size_t) i < len && (int) start < ft_strlen(s))
 	{
 		w[i] = s[start];

@@ -3,15 +3,16 @@
 
 void	ft_putnbr_fd(int n, int fd)
 {
-	char a;
+	unsigned int c;
 
+	c = n;
 	if (n < 0)
 	{
+		c *= -1;
 		ft_putchar_fd('-', fd);
-		n *= -1;
-	}
-	if (n > 9)
-		ft_putnbr_fd((n / 10), fd);
-	a = (n % 10) + '0';
-	ft_putchar_fd(a, fd);
+	}       
+	if (c > 9)
+		ft_putnbr_fd((c / 10), fd);
+	c = c % 10 + 48;
+	ft_putchar_fd(c, fd);
 }

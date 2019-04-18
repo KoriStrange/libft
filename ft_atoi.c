@@ -1,25 +1,36 @@
 
 #include "libft.h"
 
+char	ft_space(char c)
+{
+	return (c == ' '|| (c >= 9 && c <= 13));
+}
+
 int	ft_atoi(char *str)
 {
-	int nb;
+	int n;
 	int s;
 	int i;
 
-	nb = 0;
+	n = 0;
 	s = 1;
 	i = 0;
+	while (str[i] && (ft_space(str[i])))
+		i++;
 	if (str[i] == '-')
 	{
 		s *= -1;
 		i++;
 	}
-	while (str[i] != '\0')
+	else if (str[i] && str[i] == '+')
+		i++;
+	while (str[i])
 	{
 		if (ft_isdigit(str[i]))
-			nb = (nb * 10) + (str[i] - '0');
+			n = (n * 10) + (str[i] - '0');
+		else
+			return (s * n);
 		i++;
 	}
-	return (s * nb);
+	return (s * n);
 }
