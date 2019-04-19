@@ -54,7 +54,8 @@ char	**ft_strsplit(char *s, char c)
         j = 0;
         k = 0;
         n = nalpha(s, c);
-	if (!(w = (char **) malloc(sizeof(char *) * nwords(s, c))))
+	w = (char **) malloc(sizeof(char *) * nwords(s, c));
+	if (w == NULL)
 		return (NULL);
         while (s[i])
         {
@@ -68,6 +69,6 @@ char	**ft_strsplit(char *s, char c)
                 if (s[i] == c)
                         j = i + 1;
         }
-	free(n);
+	w[k] = NULL;
         return (w);
 }
