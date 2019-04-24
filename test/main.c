@@ -1,114 +1,56 @@
 
-#include "libtest.h"
+#include "libft.h"
 
-int	main()
+struct box
 {
-/*1. libc functions*/
+	int	num;
+	struct box *next;
+};
 
-	char	s[20] = "Hello";
-	char	t[20] = "Later";
-	size_t	n;
-	char	a, b, c;
-	char	*is, *ls, *us, *f;
+struct box *createbox(int n)
+{
+	struct box *x;
 
-	n = 4;
-	a = 'e';
-	b = '0';
-	c = '\t';
-	is = "123";
-	ls = "small";
-	us = "big";
-	f = "loL";
+	x = malloc(sizeof(struct box));
+	x->num = 1;
+	return (x);
+}
 
-	ft_putstr("test string: ");
-	ft_putstr(s);
-	ft_putstr("\n\n");
-/*1. ft_strlen*/
-	t_strlen(s);
-/*2. ft_strdup*/
-	t_strdup(s);
-/*3. ft_strcpy*/
-	t_strcpy(s);
-/*4. ft_strncpy*/
-	t_strncpy(s, n);
-/*5. ft_isalpha*/
-	t_isalpha(a, b, c);
-/*6. ft_isdigit*/
-	t_isdigit(a, b, c);
-/*7. ft_isalnum*/
-	t_isalnum(a, b, c);
-/*8. ft_toupper*/
-	t_toupper(ls);
-/*9. ft_tolower*/
-	t_tolower(us);
-/*10. ft_strcmp*/
-	t_strcmp(s, t);
-/*11. ft_strncmp*/
-	t_strncmp(s, t, n);
-/*12. ft_atoi*/
-	t_atoi(is);
-/*13. ft_memset*/
-	t_memset(a, n);
-/*14. ft_bzero*/
-	t_bzero(n);
-/*15. ft_memcpy*/
-/*16. ft_memccpy*/
-/*17. ft_memmove*/
-/*18. ft_memchr*/
-/*19. ft_memcmp*/
-/*20. ft_strcat*/
-	t_strcat(s, t);
-/*21. ft_strncat*/
-	t_strncat(s, t, n);
-/*22. ft_strlcat*/
-/*23. ft_strchr*/
-	t_strchr(s, a);
-/*24. ft_strrchr*/
-	t_strrchr(s, a);
-/*25. ft_strstr*/
-	t_strstr(s, f);
-/*26. ft_strnstr*/
-	t_strnstr(s, f, n);
-/*27. ft_isascii*/
-	t_isascii(a, b, c);
-/*28. ft_isprint*/
-	t_isprint(a, b, c);
+struct box *insert(struct box *node, int n)
+{
+	struct box *x;
+	struct box *curr;
+	struct box *prev;
 
-/*2. additional functions*/
+	x = createbox(n);
+	curr = node;
+	prev = NULL;
 
-/*29. ft_putchar*/
-/*30. ft_putstr*/
-/*31. ft_putnbr*/
-/*32. ft_memalloc*/
-/*33. ft_memdel*/
-/*34. ft_strnew*/
-/*35. ft_strdel*/
-/*36. ft_strclr*/
-/*37. ft_striter*/
-/*38. ft_striteri*/
-/*39. ft_strmap*/
-/*40. ft_strmapi*/
-/*41. ft_strequ*/
-/*42. ft_strnequ*/
-/*43. ft_strsub*/
-/*44. ft_strjoin*/
-/*45. ft_strtrim*/
-/*46. ft_strsplit*/
-/*47. ft_itoa*/
-/*48. ft_putendl*/
-/*49. ft_putchar_fd*/
-/*50. ft_putstr_fd*/
-/*51. ft_putendl_fd*/
-/*52. ft_putnbr_fd*/
+	while (curr && n < curr->num)
+	{
+		prev = curr;
+		curr = curr->next;
+	}
 
-/*3. bonus functions*/
+	x->next = curr;
+	if (prev)
+		prev->next = x;
+	else
+		node = x;
+	return (node);
+}
 
-/*53. ft_lstnew*/
-/*54. ft_lstdelone*/
-/*55. ft_lstdel*/
-/*56. ft_lstadd*/
-/*57. ft_lstiter*/
-/*58. ft_lstmap*/
+int	main(void)
+{
+	struct box *start;
+	start = malloc(sizeof(struct box));
 
+	start = insert(start, 7);
+	start = insert(start, 2);
+	start = insert(start, 4);
+
+	ft_putnbr(start->num);
+	ft_putnbr(start->next->num);
+	ft_putnbr(start->next->next->num);
 	return (0);
 }
