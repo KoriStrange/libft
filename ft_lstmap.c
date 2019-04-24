@@ -3,22 +3,23 @@
 
 t_list	*ft_lstmap(t_list *lst, t_list *(*f)(t_list *elem))
 {
-	t_list  *x;
-	t_list  *y;
+	t_list	*x;
+	t_list	*a;
 
-	x = lst;
-	y = NULL;
-	while (x != NULL)
+	x = ft_lstnew(lst->content, lst->content_size);
+	if (x && lst)
 	{
-		if (y == f(x))
+		x = f(lst);
+		a = x;
+		while (lst->next)
 		{
-			y = (t_list *) malloc(sizeof(t_list));
-			y = f(x);
-			y = y->next;
+			x->next = ft_lstnew(lst->content, lst->content_size);
+			if (x->next)
+				x->next = f(lst->next);
 			x = x->next;
+			lst = lst->next;
 		}
-		else
-			break;
+		return (a);
 	}
-	return (y);
+	return (NULL);
 }
